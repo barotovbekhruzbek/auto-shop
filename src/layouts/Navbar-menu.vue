@@ -22,6 +22,10 @@
 
   <div class="menu" :class="{ 'menu-open': showMenu }">
     <div class="menu-link">
+      <button class="close-btn">
+        
+      </button>
+
       <ul>
         <li><a href="#">Каталог </a></li>
         <li><a href="#">О магазине </a></li>
