@@ -12,12 +12,41 @@
             </ul>
           </div>
       </div>
+
+
+
+  </div>
+  <button @click="showMenu = !showMenu" class="burger-menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="menu" :class="{ 'menu-open': showMenu }">
+    <div class="menu-link">
+      <button class="close-btn">
+        
+      </button>
+
+      <ul>
+        <li><a href="#">Каталог </a></li>
+        <li><a href="#">О магазине </a></li>
+        <li><a href="#">Доставка </a></li>
+        <li><a href="#"> Оплата</a></li>
+        <li><a href="#"> Гарантия</a></li>
+        <li><a href="#"> Контакты</a></li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Navbar-menu"
+  name: "Navbar-menu",
+  data () {
+    return {
+      showMenu: false,
+
+    }
+  }
 }
 </script>
 
@@ -43,6 +72,43 @@ export default {
   font-weight: 700;
   font-size: 14.82px;
 }
+/* mobile menu*/
+
+
+.burger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.burger-menu i {
+  font-size: 25px;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #0A67CB;
+  transition: all 0.3s ease-in-out;
+}
+.menu ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  gap: 15px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+.menu-open {
+  left: 0;
+}
 
 
 @media (max-width: 900px) {
@@ -58,15 +124,15 @@ export default {
   .container {
     max-width: 550px;
   }
+  .burger-menu {
+    display: block;
+  }
   .navbar-menu {
-    height: auto;
-    padding-bottom: 20px;
+   display: none;
   }
-  .menu-main ul {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
-  }
+
 }
 </style>
+
+
+
