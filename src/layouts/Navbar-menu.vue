@@ -22,8 +22,8 @@
 
   <div class="menu" :class="{ 'menu-open': showMenu }">
     <div class="menu-link">
-      <button class="close-btn">
-        
+      <button class="close-btn" @click="showMenu = !showMenu">
+        <i class="fa-sharp fa-solid fa-xmark"></i>
       </button>
 
       <ul>
@@ -109,7 +109,15 @@ export default {
 .menu-open {
   left: 0;
 }
-
+.close-btn{
+  border: unset;
+  background-color: transparent;
+  color: white;
+  float: right;
+  font-size: 20px;
+  border-radius: 4px;
+  padding: 8px 15px;
+}
 
 @media (max-width: 900px) {
   .container {

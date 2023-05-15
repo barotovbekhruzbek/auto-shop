@@ -90,6 +90,18 @@
   z-index: 1;
   
 }
+
+@media (max-width:600px) {
+  .simple-modal {
+    top: 25%;
+  }
+  .simple-modal h1 {
+    font-size: 22px;
+  }
+  .simple-modal .login-box {
+    width: auto;
+  }
+}
 .simple-modal p {
   text-align: center;
 }
