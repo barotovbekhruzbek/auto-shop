@@ -108,4 +108,21 @@ export default {
     padding-left: 20px;
     padding-bottom: 20px;
   }
+
+  @media (max-width:900px) {
+    .banner-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+ 
+}
+
+@media (max-width: 600px) {
+  .banner-left { 
+    width: 100%;
+  }
+  .banner-right { 
+    display: none;
+  }
+}
+  }
 </style>

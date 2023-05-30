@@ -113,4 +113,19 @@ export default {
         align-items: center;
         gap: 10px;
     }
+
+    @media (max-width:900px) {
+        .wrapper-category {
+            padding: 20px;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        @media (max-width:600px) {
+            .wrapper-category {
+                justify-content: center;
+                flex-direction: column;
+                    
+            }
+        }
+    }
 </style>
