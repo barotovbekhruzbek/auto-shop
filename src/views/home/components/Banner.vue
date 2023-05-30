@@ -124,5 +124,20 @@ export default {
     display: none;
   }
 }
+@media (max-width: 450px) {
+  .banner-left { 
+    width: 100%;
+  }
+  .banner-right { 
+    display: none;
+  }
+  .banner-left-title h3 {
+  
+    font-size: 22px;
+    line-height: 30px;
+    height: auto;
+
+  }
+}
   }
 </style>

@@ -27,4 +27,21 @@ export default {
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  @media (max-width:900px) {
+    .container {
+      max-width: 800px;
+    }
+  }
+  
+  @media (max-width:600px) {
+    .container {
+      max-width: 500px;
+    }
+  }
+  @media (max-width:450px) {
+    .container {
+      max-width: 400px;
+    }
+  }
 </style>
